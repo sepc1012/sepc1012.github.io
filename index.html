@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebastian | Dev Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -20,17 +22,28 @@
     <hr>
 
     <section id="proyectos">
-        <h2>PROYECTOS DESTACADOS</h2>
+        <h2>PROYECTOS</h2>
+        <div class="projects-container">
+            <article class="project-card">
+                <div class="card-image">
+                    <img src="https://raw.githubusercontent.com/sepc1012/servicore-asuservicio/main/screenshot.png"
+                        alt="ServiCore Preview">
+                </div>
+                <div class="card-body">
+                    <h3>ServiCore</h3>
+                    <p id="repo-description">Cargando gestión de "A Su Servicio"...</p>
 
-        <div id="servicore-card" style="border: 1px solid #ccc; padding: 20px; border-radius: 8px;">
-            <h3>ServiCore - A Su Servicio</h3>
-            <p id="repo-description">Cargando descripción desde GitHub...</p>
-            <div style="font-size: 0.9em; color: #666;">
-                <span id="repo-language">Java</span> |
-                <span id="repo-updated">Actualizado: ...</span>
-            </div>
-            <br>
-            <a href="https://github.com/sepc1012/servicore-asuservicio" target="_blank">Revisar Código</a>
+                    <div id="repo-languages" class="languages-flex">
+                    </div>
+
+                    <div class="card-footer">
+                        <span id="repo-updated"></span>
+                        <div class="links">
+                            <a href="https://github.com/sepc1012/servicore-asuservicio" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -54,4 +67,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
