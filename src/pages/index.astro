@@ -1,0 +1,40 @@
+---
+// src/pages/index.astro
+const name = "SEBASTIÁN";
+---
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Sebastian | Portfolio</title>
+    <style>
+        body { background: #121212; color: white; font-family: sans-serif; padding: 40px; }
+        h1 { color: #2ea44f; font-size: 3rem; }
+        section { margin-bottom: 40px; border-bottom: 1px solid #333; pb: 20px; }
+        .badge { background: #333; color: #2ea44f; padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>{name}</h1>
+        <p>Junior Programmer | Dota Player | Arch Linux User</p>
+    </section>
+
+    <section>
+        <h2>Sobre mí</h2>
+        <p>Estudiante de programación en Lima. Dueño de "A Su Servicio".</p>
+    </section>
+
+    <section>
+        <h2>Proyectos</h2>
+        <div>
+            <h3>ServiCore</h3>
+            <p>Gestión de repuestos y servicios técnicos.</p>
+            <span class="badge">Java</span> <span class="badge">Spring Boot</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contacto: <a href="mailto:pizarrochauca.sebastian" style="color: #2ea44f;">Email</a></p>
+    </footer>
+</body>
+</html>
