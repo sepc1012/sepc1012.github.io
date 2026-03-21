@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write  
   pages: write
   id-token: write
 
@@ -17,11 +17,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python Dependencies
+        run: |
+          pip install requests python-dotenv
+
+      - name: Generate Projects JSON
+        env:
+          GITHUB_USER: ${{ secrets.GITHUB_USER }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          
+          python main.py 
+
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 8
-
+          version: 9 
+          
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

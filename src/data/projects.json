@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Arenamaster",
+        "description": "proyecto escolar",
+        "url": "https://github.com/sepc1012/ArenaMaster",
+        "stars": 2,
+        "language": "Java",
+        "topics": [],
+        "last_update": "21 Mar 2026",
+        "size": 148
+    },
+    {
+        "name": "Servicore Asuservicio",
+        "description": "ServiCore is a web application designed to centralize the management of \"A Su Servicio\", transforming manual handling into an automated digital workflow.",
+        "url": "https://github.com/sepc1012/servicore-asuservicio",
+        "stars": 0,
+        "language": "Java",
+        "topics": [],
+        "last_update": "07 Mar 2026",
+        "size": 25
+    },
+    {
+        "name": "Github Api Automator",
+        "description": "solucion a mi flojera para actualizar mi web a mano",
+        "url": "https://github.com/sepc1012/GitHub-API-Automator",
+        "stars": 0,
+        "language": "Python",
+        "topics": [],
+        "last_update": "21 Mar 2026",
+        "size": 12
+    }
+]

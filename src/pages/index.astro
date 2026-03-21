@@ -2,9 +2,9 @@
 import '../styles/global.css';
 import { Github, Mail, Terminal, ExternalLink, Code2, Cpu } from 'lucide-react';
 
-const response = await fetch('https://api.github.com/users/sepc1012/repos?sort=updated');
-const allRepos = await response.json();
-const projects = allRepos.filter(repo => repo.name !== 'sepc1012.github.io' && repo.description).slice(0, 3);
+import allProjects from '../data/projects.json';
+
+const projects = allProjects.slice(0, 3);
 ---
 
 <html lang="es">
@@ -40,10 +40,10 @@ const projects = allRepos.filter(repo => repo.name !== 'sepc1012.github.io' && r
         <div class="bg-blue-900/20 border border-blue-800/30 rounded-2xl p-8 flex flex-col justify-center gap-4">
             <h3 class="text-blue-400 font-bold flex items-center gap-2 uppercase text-xs tracking-[0.2em]">Stack</h3>
             <ul class="space-y-3 font-mono text-sm">
-                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Java / Spring Boot</li>
-                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Kotlin / Android</li>
-                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Python Automation</li>
-                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Arch Linux / CachyOS</li>
+                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Java </li>
+                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Kotlin </li>
+                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Python </li>
+                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> CachyOS</li>
             </ul>
         </div>
 
@@ -57,7 +57,7 @@ const projects = allRepos.filter(repo => repo.name !== 'sepc1012.github.io' && r
                         <div>
                             <div class="flex justify-between items-center mb-4">
                                 <Code2 size={20} class="text-blue-500" />
-                                <a href={repo.html_url} target="_blank" class="text-slate-500 hover:text-white transition-colors"><ExternalLink size={18}/></a>
+                                <a href={repo.url} target="_blank" class="text-slate-500 hover:text-white transition-colors"><ExternalLink size={18}/></a>
                             </div>
                             <h3 class="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{repo.name}</h3>
                             <p class="text-sm text-slate-400 line-clamp-3 mb-6 font-light leading-relaxed">{repo.description}</p>
@@ -88,11 +88,3 @@ const projects = allRepos.filter(repo => repo.name !== 'sepc1012.github.io' && r
     </footer>
 </body>
 </html>
-
-<style is:global>
-    /* Ocultar scrollbar pero permitir scroll en móvil */
-    .scrollbar-hide::-webkit-scrollbar { display: none; }
-    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-    
-    html { scroll-behavior: smooth; }
-</style>
