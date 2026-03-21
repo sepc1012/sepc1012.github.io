@@ -31,8 +31,8 @@ jobs:
           GITHUB_USER: ${{ secrets.GITHUB_USER }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          
-          python main.py 
+          # Ejecutamos el script desde la carpeta scripts
+          python scripts/main.py 
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
@@ -61,7 +61,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
