@@ -11,13 +11,13 @@
     },
     {
         "name": "Servicore Asuservicio",
-        "description": "ServiCore is a web application designed to centralize the management of \"A Su Servicio\", transforming manual handling into an automated digital workflow.",
-        "url": "https://github.com/sepc1012/servicore-asuservicio",
+        "description": "solucion para un negocio local nuevo chimbote - Perú",
+        "url": "https://github.com/sepc1012/ServiCore-ASuServicio",
         "stars": 0,
-        "language": "Java",
+        "language": "TypeScript",
         "topics": [],
-        "last_update": "07 Mar 2026",
-        "size": 25
+        "last_update": "22 Mar 2026",
+        "size": 80
     },
     {
         "name": "Github Api Automator",
@@ -27,6 +27,6 @@
         "language": "Python",
         "topics": [],
         "last_update": "21 Mar 2026",
-        "size": 12
+        "size": 15
     }
 ]
